@@ -4,6 +4,9 @@ require('definition')
 require('word')
 
 describe(Definition) do
+  before() do
+    Definition.clear()
+  end
   describe('.all') do
     it('is empty at first') do
       expect(Definition.all()).to(eq([]))
