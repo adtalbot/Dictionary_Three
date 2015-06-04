@@ -42,4 +42,17 @@ describe(Word) do
       expect(Word.find(2)).to(eq(test_word2))
     end
   end
+  describe('#definitions') do
+    it('is empty at first') do
+      test_word = Word.new({:name => 'dog'})
+      expect(test_word.definitions()).to(eq([]))
+    end
+  end
+  describe('#add_definition') do
+    it('adds a definition to a word') do
+      test_word = Word.new({:name => 'dog'})
+      test_word.add_definition('mans best friend')
+      expect(test_word.definitions()).to(eq(['mans best friend']))
+    end
+  end
 end
