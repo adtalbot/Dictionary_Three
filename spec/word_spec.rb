@@ -33,4 +33,10 @@ describe(Word) do
       expect(test_word.id()).to(eq(1))
     end
   end
+  describe('#definitions') do
+    it('is empty at first') do
+      test_word = Word.new({:name => 'dog', :id => 1})
+      expect(test_word.definitions()).to(eq([]))
+    end
+  end
 end
