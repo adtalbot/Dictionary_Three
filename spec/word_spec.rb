@@ -33,10 +33,16 @@ describe(Word) do
       expect(test_word.id()).to(eq(1))
     end
   end
-  describe('#definitions') do
-    it('is empty at first') do
-      test_word = Word.new({:name => 'dog', :id => 1})
-      expect(test_word.definitions()).to(eq([]))
-    end
-  end
+  # describe('#definitions') do
+  #   it('is empty at first') do
+  #     test_word = Word.new({:name => 'dog', :id => 1})
+  #     expect(test_word.definitions()).to(eq([]))
+  #   end
+  #   it('will return all definitions of a word') do
+  #     test_word = Word.new({:name => 'dog', :id => 1})
+  #     test_word.add_definition('mans best friend')
+  #     test_word.add_definition('little horses')
+  #     expect(test_word.definitions()).to(eq(['mans best friend', 'little horses']))
+  #   end
+  # end
 end
