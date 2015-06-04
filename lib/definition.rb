@@ -1,10 +1,10 @@
 class Definition
-  attr_reader(:definition_entry)
+  attr_reader(:meaning)
 
   @@definitions = []
 
   define_method(:initialize) do |attributes|
-    @definition_entry = attributes.fetch(:definition_entry)
+    @meaning = attributes.fetch(:meaning)
   end
   define_singleton_method(:all) do
     @@definitions
