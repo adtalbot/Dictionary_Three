@@ -11,14 +11,4 @@ class Word
   define_singleton_method(:all) do
     @@words
   end
-  define_method(:save) do
-    @@words.push(self)
-  end
-  define_singleton_method(:clear) do
-    @@words = []
-  end
-  define_method(:define) do |meaning|
-    Definition.new({:meaning => meaning})
-    @definitions.push(meaning)
-  end
 end
