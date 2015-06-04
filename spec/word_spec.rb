@@ -4,6 +4,9 @@ require('word')
 require('definition')
 
 describe(Word) do
+  before() do
+    Word.clear()
+  end
   describe('.all') do
     it('is empty at first') do
       expect(Word.all()).to(eq([]))
@@ -14,6 +17,13 @@ describe(Word) do
       test_word = Word.new({:name => 'dog', :id => 1})
       test_word.save()
       expect(Word.all()).to(eq([test_word]))
+    end
+  end
+  describe('.clear') do
+    it('clears the array of saved words') do
+      Word.new({:name => 'dog', :id => 1}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
     end
   end
 end
