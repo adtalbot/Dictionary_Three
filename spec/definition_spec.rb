@@ -16,4 +16,11 @@ describe(Definition) do
       expect(Definition.all()).to(eq([test_definition]))
     end
   end
+  describe('.clear') do
+    it('clears the array of saved definitions') do
+      Definition.new({:meaning => 'mans best friend'}).save()
+      Definition.clear()
+      expect(Definition.clear()).to(eq([]))
+    end
+  end
 end

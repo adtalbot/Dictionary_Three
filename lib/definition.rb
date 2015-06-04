@@ -12,4 +12,7 @@ class Definition
   define_method(:save) do
     @@definitions_list.push(self)
   end
+  define_singleton_method(:clear) do
+    @@definitions_list = []
+  end
 end
