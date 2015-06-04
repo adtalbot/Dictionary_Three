@@ -35,4 +35,6 @@ describe(Word) do
       expect(Word.find(test_word.word_id())).to(eq(test_word))
     end
   end
+  # describe('#add_definition') do
+  #   new_definition = Definition.new
 end
