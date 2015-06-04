@@ -16,4 +16,11 @@ describe(Word) do
       expect(Word.all()).to(eq([test_word]))
     end
   end
+  describe('.clear') do
+    it('clears the array of saved words') do
+      Word.new({:name => 'dog'}).save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
 end
