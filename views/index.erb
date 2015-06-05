@@ -1,0 +1,20 @@
+<h1>Your Words:</h1>
+
+<% @words.each() do |word| %>
+  <ul>
+    <li><a href='/words/<%= word.id() %>'><%= word.name() %></a></li>
+    <% end %>
+  </ul>
+
+<p>Add word</p>
+
+<form action='/' method='post'>
+  <div class='form-group'>
+    <label for ='word'>Word</label>
+    <input id ='word' name='word' type='text' class='placeholder'>
+
+    <label for ='definition'>Definition</label>
+    <input id = 'definition' name='definition' type= 'text' class='placeholder'>
+  </div>
+  <button type='submit' class='btn btn-button'>Add Word</button>
+</form>
